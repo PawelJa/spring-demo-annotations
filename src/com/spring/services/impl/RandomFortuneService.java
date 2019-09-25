@@ -1,6 +1,7 @@
 package com.spring.services.impl;
 
 import com.spring.services.FortuneService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
@@ -9,12 +10,9 @@ import java.util.Random;
 public class RandomFortuneService implements FortuneService {
 
     // create an array of strings
-    private String[] data = {
-            "Beware of the wolf in sheep's clothing",
-            "Diligance is the mother of good luck",
-            "The journey is the reward"
-    };
 
+    @Value("${foo.fortuneList}")
+    private String[] data;
     // create a random number generator
     private Random random = new Random();
 
