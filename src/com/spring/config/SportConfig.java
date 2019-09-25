@@ -12,7 +12,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 //@ComponentScan("com.spring")
-@PropertySource("classpath:fortune.properties")
+@PropertySource("classpath:sport.properties")
 public class SportConfig {
 
     // define bean for our sad fortune service
